@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">RYC</title>
+  <desc id="desc">Logo RYC ù estimaciùn de precio de vehùculos</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="240" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="64" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <path d="M28 18h18c10 0 17 6 17 15 0 6-3 11-9 13l11 14h-14l-9-12h-6v12H28V18zm17 22c4 0 6-2 6-6s-2-6-6-6h-7v12h7z" fill="url(#g)"/>
+  <path d="M78 18h36v11h-22v8h18v11h-18v15H78V18z" fill="#e2e8f0"/>
+  <path d="M128 18h14l17 40h-15l-3-8h-16l-3 8h-14l18-40zm8 24-5-13-5 13h10z" fill="url(#g)"/>
+  <path d="M168 18h30c12 0 20 7 20 18 0 11-8 18-20 18h-12v12h-18V18zm27 27c0-5-3-8-9-8h-9v16h9c6 0 9-3 9-8z" fill="#e2e8f0"/>
+</svg>

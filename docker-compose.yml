@@ -1,0 +1,29 @@
+services:
+  api:
+    build:
+      context: ./backend
+    ports:
+      - "8001:8000"
+    environment:
+      CORS_ORIGINS: "http://localhost:3001,http://127.0.0.1:3001"
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        BACKEND_INTERNAL_URL: http://api:8000
+    ports:
+      - "3001:3000"
+    depends_on:
+      - api
+    environment:
+      # Por si en el futuro el servidor Next hace fetch SSR al backend
+      BACKEND_INTERNAL_URL: http://api:8000
+  cloudflared-tunnel:
+    image: cloudflare/cloudflared:latest
+    depends_on:
+      - web
+    environment:
+      - CF_TUNNEL_TOKEN=${CF_TUNNEL_TOKEN}
+    command: tunnel run --token ${CF_TUNNEL_TOKEN}
+    restart: unless-stopped
